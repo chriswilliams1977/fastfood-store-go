@@ -1,31 +1,17 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 
-	burgers := menu{"Slim Jim", newBurger()}
-	burgers = append(burgers, "Average Joe")
+	//get burger type
+	//fmt.Println(getBurger(2))
 
-	//burgers is type menu
-	//menu has func print
-	burgers.print()
-
-}
-
-func newBurger() string {
-	return "Big Devon"
-}
-
-func getBurger(menuSelection int) string {
-	burger := ""
-	switch menuSelection {
-	case 1:
-		burger = "Slim Jim"
-	case 2:
-		burger = "Average Joe"
-	case 3:
-		burger = "Big Devon"
-	default:
-		burger = "Big Devon"
+	//get menu items by tyep
+	order := getMenuItems("")
+	for _, orderItem := range order {
+		fmt.Println(orderItem)
 	}
-	return burger
 }
